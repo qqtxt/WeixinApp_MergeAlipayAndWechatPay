@@ -1,0 +1,53 @@
+/**index.wxss**/
+
+.paytype-button {
+  background-color: #F9F9F9;
+}
+
+.alipay-default {
+  background-color: #F9F9F9;
+  margin-bottom: 20px;
+  width: 160px;
+}
+.alipay-right {
+  background-color: #118CE2;
+  margin-bottom: 20px;
+  width: 160px;
+  color: white;
+}
+
+.alipay-wrong {
+  background-color: #EE6363;
+  margin-bottom: 20px;
+  width: 160px;
+  color: white;
+}
+
+.wechat-default {
+  background-color: #F9F9F9;
+  margin-bottom: 20px;
+  width: 160px;
+}
+.wechat-right {
+  background-color: #229F2B;
+  margin-bottom: 20px;
+  width: 160px;
+  color: white;
+}
+
+.wechat-wrong {
+  background-color: #EE6363;
+  margin-bottom: 20px;
+  width: 160px;
+  color: white;
+}
+
+.logo-button-selected {
+  background-color: #9ACD32;
+  color: white;
+}
+
+.submit-button {
+  margin-top: 50px;
+  width: 160px;
+}

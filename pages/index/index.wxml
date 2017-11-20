@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <button wx:if="{{alipayRight == '0'}}" class='alipay-default' bindtap='bindAlipay'>支付宝</button>
+    <button wx:if="{{alipayRight == '1'}}" hidden='{{ alipayRight != "1" }}' class='alipay-right' bindtap='bindAlipay'>支付宝</button>
+    <button wx:if="{{alipayRight == '2'}}" hidden='{{ alipayRight != "2" }}' class='alipay-wrong' bindtap='bindAlipay'>支付宝</button>
+
+    <button wx:if="{{wechatRight == '0'}}" class='wechat-default' bindtap='bindWechat'>微信</button>
+    <button wx:if="{{wechatRight == '1'}}" class='wechat-right' bindtap='bindWechat'>微信</button>
+    <button wx:if="{{wechatRight == '2'}}" class='wechat-wrong' bindtap='bindWechat'>微信</button>
+
+    <!-- <button wx:if="{{logoRight == '0'}}" bindtap='bindLogo' class='paytype-button'>logo</button>
+    <button wx:if="{{logoRight == '1'}}" bindtap='bindLogo' class='logo-button-selected'>logo</button>   -->
+  </view>
+  <view>
+    <button class='submit-button' bindtap='bindSubmit'>立即合并</button>
+  </view>
+</view>
