@@ -4,41 +4,61 @@
   background-color: #F9F9F9;
 }
 
+.pay-channel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border-color: red;
+  border-width: 1px;
+  margin-right: 25px;
+  margin-left: 25px;
+  
+}
+
 .alipay-default {
   background-color: #F9F9F9;
   margin-bottom: 20px;
-  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: xx-large;
 }
 .alipay-right {
   background-color: #118CE2;
   margin-bottom: 20px;
-  width: 160px;
   color: white;
 }
 
 .alipay-wrong {
   background-color: #EE6363;
   margin-bottom: 20px;
-  width: 160px;
   color: white;
 }
 
 .wechat-default {
   background-color: #F9F9F9;
   margin-bottom: 20px;
-  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: xx-large;
 }
 .wechat-right {
   background-color: #229F2B;
   margin-bottom: 20px;
-  width: 160px;
   color: white;
 }
 
 .wechat-wrong {
   background-color: #EE6363;
   margin-bottom: 20px;
-  width: 160px;
   color: white;
 }
 
@@ -50,4 +70,23 @@
 .submit-button {
   margin-top: 50px;
   width: 160px;
+   height: 80px; 
+  background-color: #F9F9F9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+}
+
+.pay-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.pay-title {
+  width: 70px;
+   /* background-color: rebeccapurple;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
