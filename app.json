@@ -2,12 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/qrcode/qrcode"
+    "pages/qrcode/qrcode",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "一码付",
+    "navigationBarTitleText": "合并收款码",
     "navigationBarTextStyle": "black"
   }
 }

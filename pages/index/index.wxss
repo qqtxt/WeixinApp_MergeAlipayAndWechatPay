@@ -90,3 +90,18 @@
   justify-content: center;
   align-items: center;
 }
+
+
+.about {  
+  color: green;  
+  position: fixed;  
+  display: flex;   
+  align-items: center;   
+  justify-content: center;   
+  bottom: 20rpx;   
+  right: 20rpx;   
+  width: 100rpx;   
+  height: 40rpx;  
+  text-align: center;
+  font-size: 28rpx;  
+}

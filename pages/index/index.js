@@ -23,16 +23,6 @@ Page({
   // 立即合并
   bindSubmit: function() {
     
-    // 测试
-    // this.setData({
-    //   alipay: 'FKX05639AEMUOSN0TE016F',
-    //   wechat: 'f2f0JV5T664Amfb_JDHLXtMBTrL2_8PvU68O',
-    // })
-    // wx.navigateTo({
-    //   url: '../qrcode/qrcode?alipay=' + this.data.alipay + "&wechat=" + this.data.wechat + "&logo=" + this.data.logo,
-    // })
-    // return
-    
     if (this.data.alipay != "" && this.data.wechat != "") {
       console.log(this.data.alipay)
       console.log(this.data.wechat)
@@ -48,6 +38,14 @@ Page({
           wx.hideLoading()
         }, 2000)
     }
+  },
+
+  // 关于
+  bindAbout: function() {
+    console.log('关于')
+    wx.navigateTo({
+      url: '../about/about',
+    })
   },
 
   // logo
@@ -91,7 +89,7 @@ Page({
             alipayRight: "2",
           }),
           wx.showToast({
-            title: '收款码错误',
+            title: '支付宝收款码错误',
             icon: 'loading'
           }),
           setTimeout(function () {
@@ -105,7 +103,7 @@ Page({
           alipayRight: "2",
         }),
         wx.showToast({
-          title: '收款码错误',
+          title: '支付宝收款码错误',
           icon: 'loading'
         }),
         setTimeout(function () {
@@ -133,7 +131,7 @@ Page({
             wechatRight: "2",
           })
           wx.showToast({
-            title: '收款码错误',
+            title: '微信收款码错误',
             icon: 'loading'
           })
           setTimeout(function () {
@@ -147,7 +145,7 @@ Page({
           wechatRight: "2",
         })
         wx.showToast({
-          title: '收款码错误',
+          title: '微信收款码错误',
           icon: 'loading'
         })
         setTimeout(function () {

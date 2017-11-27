@@ -19,5 +19,6 @@
   </view> -->
   <view>
     <view class='submit-button btn' bindtap='bindSubmit'>FUSE</view>
+    <view class='about' bindtap='bindAbout'>About</view>
   </view>
 </view>
