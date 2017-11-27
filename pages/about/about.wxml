@@ -77,7 +77,7 @@
     <view class='visite-site'>
       https://heyfox.herokuapp.com
     </view>
-    <view class='visite-more'>网页版地址，可添加logo</view>
+     <view class='visite-more'>网页版地址</view> 
   </view>
   
 </view>

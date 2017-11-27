@@ -23,6 +23,16 @@ Page({
   // 立即合并
   bindSubmit: function() {
     
+    // this.setData({
+    //   alipay: "FKX05639AEMUOSN0TE016F",
+    //   wechat: "f2f0JV5T664Amfb_JDHLXtMBTrL2_8PvU68O",
+    //   logo: "../../utils/img/alipay.png",
+    // })
+    // wx.navigateTo({
+    //   url: '../qrcode/qrcode?alipay=' + this.data.alipay + "&wechat=" + this.data.wechat + "&logo=" + this.data.logo,
+    // })
+    // return
+
     if (this.data.alipay != "" && this.data.wechat != "") {
       console.log(this.data.alipay)
       console.log(this.data.wechat)

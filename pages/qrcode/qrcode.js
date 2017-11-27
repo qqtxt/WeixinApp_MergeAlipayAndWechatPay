@@ -19,38 +19,70 @@ Page({
       content: 'https://heyfox.herokuapp.com/pay?ali=' + options['alipay'] + '&wx=' + options['wechat'],
       logo: options['logo']
     })
-    QR.qrApi.draw(this.data.content, 'mycanvas', 300, 300)
-
+    
+    // 绘图
+    const ctx = wx.createCanvasContext('mycanvas')
+    QR.qrApi.draw(this.data.content, ctx, 300, 300)
     if (options['logo'] != '') {
-      const ctx = wx.createCanvasContext('mylogo')
-      ctx.drawImage(options['logo'], 0, 0, 30, 30)
-      ctx.draw()
+      console.log(options['logo'])
+      ctx.clearRect(129, 129, 42, 42)
+      ctx.drawImage(options['logo'], 130, 130, 40, 40)
+      
     }
+    ctx.draw()
     
   },
 
   previewImg: function (e) {
-    wx.canvasToTempFilePath({
-      canvasId: 'mycanvas',
+    wx.showActionSheet({
+      itemList: ['保存收款码'],
       success: function (res) {
-        var tempFilePath = encodeURI(res.tempFilePath)
-        console.log(res)
-        wx.previewImage({
-          current: tempFilePath, // 当前显示图片的http链接
-          urls: [tempFilePath], // 需要预览的图片http链接列表
-          success: function (res) {
-            console.log(res);
-          },
-          fail: function (res) {
-            console.log(res);
-          }
-        })
+        console.log(res.tapIndex)
+        if (res.tapIndex == 0) {
+          console.log('保存收款码')
+          wx.canvasToTempFilePath({
+            canvasId: 'mycanvas',
+            success: function (res) {
+              var tempFilePath = encodeURI(res.tempFilePath)
+              console.log(res)
+              wx.saveFile({
+                tempFilePath: res.tempFilePath,
+                success: function success(res) {
+                  console.log('saved::' + res.savedFilePath);
+                  wx.showToast({
+                    title: '保存成功',
+                  })
+                },
+                complete: function fail(e) {
+                  console.log(e.errMsg);
+                  wx.showToast({
+                    title: '保存失败',
+                    icon: 'loading'
+                  }),
+                    setTimeout(function () {
+                      wx.hideLoading()
+                    }, 2000)
+                }
+              });
+            },
+            fail: function (res) {
+              console.log(res);
+              wx.showToast({
+                title: '保存失败',
+                icon: 'loading'
+              }),
+                setTimeout(function () {
+                  wx.hideLoading()
+                }, 2000)
+            }
+          });
+        }
       },
       fail: function (res) {
-        console.log(res);
+        console.log(res.errMsg)
       }
-    });
-
+    })
+    
   },
 
   

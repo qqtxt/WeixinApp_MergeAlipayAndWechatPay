@@ -78,7 +78,7 @@
   display: flex;
   justify-content: center;
   /* background-color: green; */
-  color: white;
+  color: green;
   font-size: small;
   text-align: center;
   padding-top: 5px;
@@ -88,17 +88,16 @@
 .visite-more {
   display: flex;
   justify-content: center;
-  color: white;
+  color: green;
   font-size: x-small;
   text-align: center;
   padding-bottom: 5px;
 }
 
 .footer-site {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0px;
   width: 100%;
-  background-color: black;
-  opacity: 0.5;
+   background-color: lightgray; 
 }
 

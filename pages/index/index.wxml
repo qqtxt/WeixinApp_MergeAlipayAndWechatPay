@@ -9,14 +9,16 @@
     <view wx:if="{{wechatRight == '1'}}" class='wechat-right btn' bindtap='bindWechat'></view>
     <view wx:if="{{wechatRight == '2'}}" class='wechat-wrong btn' bindtap='bindWechat'></view>
   </view>
+  <!-- 类型  -->
   <view class='pay-container'>
     <view class='pay-title'>Alipay</view>
       <image src='../../utils/img/0.gif' style='width: 50px; height: 50px;'></image>
     <view class='pay-title'>Wechat</view>
   </view>
-  <!-- <view>
-    <image src='../../utils/img/0-2.gif' style='width: 50px; height: 80px;'></image>
-  </view> -->
+  <!-- logo -->
+  <view wx:if="{{logoRight == '0'}}" class='logo-default' bindtap='bindLogo'>logo</view>
+    <view wx:if="{{logoRight == '1'}}" class='logo-right' bindtap='bindLogo'>logo</view>
+  <!-- 合并 -->
   <view>
     <view class='submit-button btn' bindtap='bindSubmit'>FUSE</view>
     <view class='about' bindtap='bindAbout'>About</view>

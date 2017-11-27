@@ -758,19 +758,39 @@ var QR = (function () {
 		},
 
         draw: function (str, canvas, cavW, cavH, ecc) {
-        	
+          // 
+          console.log(canvas)
+          var ctx = canvas
+          // ctx = wx.createCanvasContext(canvas)
+          console.log(ctx)
+          // const grd = ctx.createLinearGradient(30, 10, 120, 10)
+          // grd.addColorStop(0, 'red')
+          // grd.addColorStop(0.16, 'orange')
+          // grd.addColorStop(0.33, 'yellow')
+          // grd.addColorStop(0.5, 'green')
+          // grd.addColorStop(0.66, 'cyan')
+          // grd.addColorStop(0.83, 'blue')
+          // grd.addColorStop(1, 'purple')
+
+          // // Fill with gradient
+          // ctx.setFillStyle(grd)
+          // ctx.fillRect(10, 10, 150, 80)
+          // ctx.draw()
+
+          // return
             ecclevel = ecc || ecclevel;
             canvas = canvas || _canvas;
-            if (!canvas) {
+            console.log(ctx)
+            if (!ctx) {
                 console.warn('No canvas provided to draw QR code in!')
                 return;
             }
 
             var size =  Math.min(cavW, cavH);
-			str = this.utf16to8(str);//增加中文显示
-			console.log(str)
+			      str = this.utf16to8(str);//增加中文显示
+			      console.log(str)
+            // ctx = wx.createCanvasContext(canvas),
             var frame = this.getFrame(str),
-                ctx = wx.createCanvasContext(canvas),
                 px = Math.round(size / (width + 8));
             var roundedSize = px * (width + 8),
                 offset = Math.floor((size - roundedSize) / 2);
@@ -784,7 +804,7 @@ var QR = (function () {
 					}
                 }
             }
-			ctx.draw();
+			// ctx.draw();
         }
     }
 	module.exports = {
