@@ -25,12 +25,10 @@ Page({
     QR.qrApi.draw(this.data.content, ctx, 300, 300)
     if (options['logo'] != '') {
       console.log(options['logo'])
-      ctx.clearRect(129, 129, 42, 42)
+      // ctx.clearRect(129, 129, 42, 42)
       ctx.drawImage(options['logo'], 130, 130, 40, 40)
-      
     }
     ctx.draw()
-    
   },
 
   previewImg: function (e) {
@@ -55,13 +53,6 @@ Page({
                 },
                 complete: function fail(e) {
                   console.log(e.errMsg);
-                  wx.showToast({
-                    title: '保存失败',
-                    icon: 'loading'
-                  }),
-                    setTimeout(function () {
-                      wx.hideLoading()
-                    }, 2000)
                 }
               });
             },
@@ -82,9 +73,5 @@ Page({
         console.log(res.errMsg)
       }
     })
-    
   },
-
-  
-
 })
