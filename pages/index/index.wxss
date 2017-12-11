@@ -113,6 +113,6 @@
   left: 20px;     
   height: 40rpx;  
   text-align: center;
-  font-size: smaller;  
+  font-size: x-small;
   padding: 5px;
 }
