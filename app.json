@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/qrcode/qrcode",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/guide/guide"
   ],
   "window": {
     "backgroundTextStyle": "light",

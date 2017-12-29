@@ -21,6 +21,10 @@
   <!-- 合并 -->
   <view>
     <view class='submit-button btn' bindtap='bindSubmit'>立即合并</view>
-    <view class='about' bindtap='bindAbout'>产品介绍</view>
+    <view class='footer'>
+      <view class='about' bindtap='bindGuide'>使用手册</view>
+      <view class='about' bindtap='bindAbout'>产品介绍</view> 
+    </view>
+    
   </view>
 </view>

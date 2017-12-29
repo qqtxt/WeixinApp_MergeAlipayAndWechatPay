@@ -58,6 +58,14 @@ Page({
     })
   },
 
+  // 使用手册
+  bindGuide: function() {
+    console.log('手册')
+    wx.navigateTo({
+      url: '../guide/guide',
+    })
+  },
+
   // logo
   bindLogo: function() {
     var that = this;

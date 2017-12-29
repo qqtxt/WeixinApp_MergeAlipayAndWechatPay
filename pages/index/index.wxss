@@ -104,10 +104,18 @@
   align-items: center;
 }
 
-
+.footer {
+  position: fixed; 
+  bottom: 20rpx;   
+  right: 20rpx;
+  left: 20px;     
+  height: 40rpx;  
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+}
 .about {  
   color: green;  
-  position: fixed;  
   bottom: 20rpx;   
   right: 20rpx;
   left: 20px;     
